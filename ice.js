@@ -3,6 +3,7 @@
 const days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
 const maleNames = ["Kwasi", "Kwadwo", "Kwabena","Kwaku","Yaw", "Kofi", "Kwame"];
 const femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
+const nameOutput = document.querySelector(".output")
 
 let subBtn = document.querySelector("#btn");
 let genderChoice = document.querySelectorAll("#gender")
@@ -21,11 +22,13 @@ subBtn.addEventListener("click", (e) => {
         let specificGender= gender.value;
 
         if(specificGender === "male") {
-            console.log(maleNames[specificDay]);
+            nameOutput.innerText = `Your Akan name is ${maleNames[specificDay]}`
+            // console.log(maleNames[specificDay]);
         }
         
         if(specificGender === "female") {
-            console.log(femaleNames[specificDay]);
+            nameOutput.innerText = `Your Akan name is ${femaleNames[specificDay]}`
+            // console.log(femaleNames[specificDay]);
         }
     }
     })
