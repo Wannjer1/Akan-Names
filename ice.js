@@ -9,5 +9,23 @@ let genderChoice = document.querySelectorAll("#gender")
 
 
 
+subBtn.addEventListener("click", (e) => {
+    e.preventDefault()
 
+    const userDate = document.querySelector("#birthdate").value
+    let convertedDate = new Date(userDate);
+    let specificDay = convertedDate.getDay();
 
+    for (let gender of genderChoice) {
+
+        let specificGender= gender.value;
+
+        if(specificGender === "male") {
+            console.log(maleNames[specificDay]);
+        }
+        
+        if(specificGender === "female") {
+            console.log(femaleNames[specificDay]);
+        }
+    }
+    })
