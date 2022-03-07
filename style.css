@@ -78,12 +78,14 @@ body h1{
     padding: 20px 25px;
     margin: 8px 0;
     border: none;
+    font-size: larger;
     border-radius: 4px;
     cursor: pointer;
 }
 
-input[type=submit]:hover {
-    background-color: #45a049;
+#btn:hover {
+    background-color: white;
+    color: #008F6A;
   }
 
 
